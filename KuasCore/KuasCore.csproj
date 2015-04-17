@@ -70,6 +70,7 @@
     <Compile Include="Dao\IEmployeeDao.cs" />
     <Compile Include="Dao\Mapper\EmployeeRowMapper.cs" />
     <Compile Include="Interceptors\DebogLogInterceptor.cs" />
+    <Compile Include="Interceptors\UpdateAllEmployeeNameInterceptor.cs" />
     <Compile Include="Interceptors\UpdateEmployeeNameInterceptor.cs" />
     <Compile Include="Models\Company.cs" />
     <Compile Include="Models\Employee.cs" />

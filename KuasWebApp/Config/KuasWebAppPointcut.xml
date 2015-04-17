@@ -16,8 +16,15 @@
     <!--to intercept the method .GetEmployeeById from the service file...-->
   </object>
 
+  <object id="UpdateAllEmployeeNameInterceptor" type="KuasCore.Interceptors.UpdateAllEmployeeNameInterceptor" />
+
+  <object id="servicePointcut_3" type="Spring.Aop.Support.SdkRegularExpressionMethodPointcut, Spring.Aop">
+    <property name="Pattern" value="KuasCore.Services.Impl.EmployeeService.GetAllEmployees" />
+  </object>
+
   <aop:config>
-    <!--<aop:advisor pointcut-ref="servicePointcut" advice-ref="debogLogInterceptor" />-->
+    <aop:advisor pointcut-ref="servicePointcut" advice-ref="debogLogInterceptor" />
     <aop:advisor pointcut-ref="servicePointcut_2" advice-ref="UpdateEmployeeNameInterceptor" />
+    <aop:advisor pointcut-ref="servicePointcut_3" advice-ref="UpdateAllEmployeeNameInterceptor" />
   </aop:config>
 </objects>
